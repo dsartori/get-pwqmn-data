@@ -1,7 +1,6 @@
 import requests
 import json
 
-# function to flatten list of lists
 def flattenList(listOfLists):
     flatList = []
     for x in listOfLists:
@@ -10,11 +9,12 @@ def flattenList(listOfLists):
     return flatList
 
 def getOntarioData(resource_id, limit=100):
-    # loop API calls until all data is retrieved
+
     flag = True
     offsetValue = 0
     dataSet = []
     outputData = []
+    
     while flag:
         url = 'https://data.ontario.ca/api/3/action/datastore_search'
         params = dict(resource_id=resource_id, limit=limit, offset=offsetValue)
