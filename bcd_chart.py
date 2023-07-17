@@ -18,3 +18,5 @@ def generate(dimensions, values, series, seriesDescription, filename):
 	ax.grid()
 	fig.savefig(filename)
 
+	# close the chart
+	pyplot.close(fig)
