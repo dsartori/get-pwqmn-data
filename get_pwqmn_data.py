@@ -33,7 +33,7 @@ for station, name in petl.values(leadTable, 'Collection Site', 'NAME'):
     stationTable = petl.convert(stationTable, 'Result', lambda v: int(v[1:]) if v[0] == '<' else v)
     
     # generate the chart
-    bcd_chart.generate(petl.values(stationTable, 'd'), petl.values(stationTable, 'Result'), 'Lead Concentration (ug/L)', name,  station + '.png')
+    bcd_chart.generate(petl.values(stationTable, ['Collection Date']), petl.values(stationTable, 'Result'), 'Lead Concentration (ug/L)', name,  station + '.png')
 
 # Write the data to a csv file
 petl.tocsv(leadTable, 'pwqmn_data.csv')
