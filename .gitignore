@@ -154,3 +154,5 @@ cython_debug/
 # ignore files created by the script
 *.csv
 *.png
+
+.DS_Store
